@@ -1,0 +1,97 @@
+.menu_container {
+  color: #fff;
+}
+.menu_container .menu_title {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.98rem;
+  background-color: #202629 ;
+}
+.menu_container .menu_title .menu_logo {
+  float: left;
+  margin: 0.13rem 0 0 0.28rem;
+}
+.menu_container .menu_title .menu_logo img {
+  width: 1.59rem;
+  height: 0.5rem;
+}
+.menu_container .menu_title .menu_attend {
+  float: right;
+  width: 1.4rem;
+  height: 0.51rem;
+  line-height: 0.51rem;
+  font-size: 0.24rem;
+  text-align: center;
+  border: 3px #ffe537 solid;
+  margin-top: 0.15rem;
+  margin-right: 0.5rem;
+}
+.menu_container .menu_title .menu_switch {
+  width: 0.44rem;
+  height: 0.02rem;
+  background: #fff;
+  float: right;
+  margin-right: 0.2rem;
+  margin-top: 0.5rem;
+  transition: .5s;
+}
+.menu_container .menu_title .menu_switch::before {
+  height: 0.02rem;
+  margin-top: -0.08rem;
+  background: #fff;
+  display: block;
+  content: " ";
+  transition: .5s;
+}
+.menu_container .menu_title .menu_switch::after {
+  display: block;
+  content: " ";
+  height: 0.02rem;
+  margin-top: -0.14rem;
+  background: #fff;
+  transition: .5s;
+}
+.menu_container .menu_title .menu_switch.menu_switch--expand {
+  background: transparent;
+  transition: .5s;
+}
+.menu_container .menu_title .menu_switch.menu_switch--expand::before {
+  transform: rotateZ(45deg);
+  margin-top: 0;
+  background: #bc3129;
+  transition: .5s;
+}
+.menu_container .menu_title .menu_switch.menu_switch--expand::after {
+  transform: rotateZ(-45deg);
+  margin-top: -0.016rem;
+  background: #bc3129;
+  transition: .5s;
+}
+.menu_container .menu_nav {
+  z-index: 20;
+  position: fixed;
+  top: 0.98rem;
+  right: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  font-size: 0.3rem;
+  background: #1e1e1e;
+  text-align: center;
+  transition: .5s;
+}
+.menu_container .menu_nav li {
+  border-top: 1px solid #2c2c2c;
+  height: 1.36rem;
+  line-height: 1.39rem;
+  overflow: hidden;
+}
+.menu_container .menu_nav.menu_nav--expand {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: .5s;
+}
